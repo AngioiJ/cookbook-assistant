@@ -59,10 +59,8 @@ Key Prompts:
 
 
 ## Part Three: Frontend and UI
-Options:
-1. Build a simple React frontend with Next.js and FastAPI.
-2. Create a CLI or a Jupyter Notebook Demo
-3. Use Gradio to make a 
-
+Method: Use Gradio to make a simple chatbot interface.
+- User input via text box for queries.
+- LLM response via formatted text display for the generated answer.
 
 
