@@ -27,10 +27,13 @@ Steps:
 1. Load and iterate through the PDFs
 2. Identify recipe sections using text patterns, headers, and formatting
 3. Store extracted data in a structured format (JSON, CSV, etc)
-### Step One: Text Extraction
+### Step One: Text Extraction and Data Structuring
 Methods:
     - `PyMuPDF` or pdf plumber for extracting structured text
-    - `Tesseract OCR` for text extraction if its scanned books
+    - Regex Python module
+    - `rapidfuzz` fuzzy matching for cleaning lines while allowing for typos
+    - 
+Chose `PyMuPDF` since OCR was already performed on the PDF. Added further cleaning steps to handle OCR issues. 
 
 ### Step Two: Data Structuring
 Method: 
