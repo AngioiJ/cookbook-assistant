@@ -26,26 +26,17 @@
 Steps:
 1. Load and iterate through the PDFs
 2. Identify recipe sections using text patterns, headers, and formatting
-3. Store extracted data in a structured format (JSON, CSV, etc)
+3. Store extracted data in a structured JSON format
+
 ### Step One: Text Extraction and Data Structuring
 Methods:
     - `PyMuPDF` or pdf plumber for extracting structured text
     - Regex Python module
     - `rapidfuzz` fuzzy matching for cleaning lines while allowing for typos
-    - 
+    - `spaCy` for parsing extracted recipes and performed Named Entity Recognition (NER) to extract metadata
 Chose `PyMuPDF` since OCR was already performed on the PDF. Added further cleaning steps to handle OCR issues. 
 
-### Step Two: Data Structuring
-Method: 
-    - Parse extracted text using `spaCy` or `NLTK`.
-    - Use `Named Entity Recognition (NER)` for metadata extraction.
-Data to Extract:
-- *Technique* ("sous-vide", "roast", "saute", etc.)
-- *Ingredients list* ("butter", "thyme", etc.)
-- *Amounts* ("200g", "1 Tablespoon", "2 cups", etc.)
-- *Time steps or target threshold*
-
-### Step Three: Data Storing
+### Step Three: Creating Embeddings and Storing Them
 Method: A vector database 
 
 
