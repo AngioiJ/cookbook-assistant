@@ -1,13 +1,24 @@
 # Recipe Assistant Project Plan
 
-### Loose Plan
+### A Guide To What's Been Done
 1) Data Extraction from PDFs of Cookbooks 
-- extract key metadata such as ingredients, techniques, and flavor profiles
+- Extract recipes and store them in a structured manner. 
+    - Extracted text using `PyMuPDF`
+    - Identified recipes and key information using Python's Regular Expression module `re`
+    - Stored recipes using JSON format
+- Optionally to improve responses: 
+    - Try extracting various metadata about each recipe using Named Entity Recognition
+    - Compare embedding models
+    - Compare LLM models
+    - Try chunking longer recipes and comparing length thresholds
 
 2) Implement Retrieval Augmented Generation (RAG). 
 - store the structured recipes in a vector database
+    - Used ChromaDB
 - use embedding models to index and retrieve relevant recipes based on user queries
+    - Embeddings computed via `mxbai-embed-large:latest`
 - pass retrieved data to an LLM to generate the response
+    - Responses generated via `llama3:latest`
 
 3) Implement the following prompts:
 - "What can I cook with X?"
@@ -20,36 +31,6 @@
 - Create a CLI or Jupyter Notebook demo
 - Streamlit or Gradio for a lightweight web interface
 
-
-
-## Part One: Data Extraction
-Steps:
-1. Load and iterate through the PDFs
-2. Identify recipe sections using text patterns, headers, and formatting
-3. Store extracted data in a structured JSON format
-
-### Step One: Text Extraction and Data Structuring
-Methods:
-    - `PyMuPDF` or pdf plumber for extracting structured text
-    - Regex Python module
-    - `rapidfuzz` fuzzy matching for cleaning lines while allowing for typos
-    - `spaCy` for parsing extracted recipes and performed Named Entity Recognition (NER) to extract metadata
-Chose `PyMuPDF` since OCR was already performed on the PDF. Added further cleaning steps to handle OCR issues. 
-
-### Step Three: Creating Embeddings and Storing Them
-Method: A vector database 
-
-
-## Part Two: Implementing RAG
-Retrieval Model: Offline embedding model through Ollama
-- maybe `text-embedding-ada-002`
-- optimize using query expansion before retrieval?
-LLM Integration: Pass retrieved data to an offline language model through Ollama to generate responses.
-
-Key Prompts:
-- "What can I cook with X?"
-- "How do I prepare Y?"
-- "What is Z technique?"
 
 
 ## Part Three: Frontend and UI
