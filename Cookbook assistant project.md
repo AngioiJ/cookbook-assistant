@@ -33,6 +33,9 @@
 
 
 
+Note: I would prefer to use Marcella Hazan's cookbook The Essentials of Italian Cooking for this application, but it's not public domain.
+
+
 ## Part Three: Frontend and UI
 Method: Use Gradio to make a simple chatbot interface.
 - User input via text box for queries.
