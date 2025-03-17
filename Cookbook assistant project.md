@@ -26,19 +26,14 @@
 - "What is Z technique?"
 - "Pairing suggestions?" - stretch goal, this could  lowkey be its own model
 
-4) Frontend Options
-- Build a small chatbot interface using React - FastAPI
+4) Frontend and UI
+- Build a small chatbot interface using Gradio
 - Create a CLI or Jupyter Notebook demo
-- Streamlit or Gradio for a lightweight web interface
 
 
-
-Note: I would prefer to use Marcella Hazan's cookbook The Essentials of Italian Cooking for this application, but it's not public domain.
-
-
-## Part Three: Frontend and UI
-Method: Use Gradio to make a simple chatbot interface.
-- User input via text box for queries.
-- LLM response via formatted text display for the generated answer.
+Future work: 
+- NER on the recipes.
+- Compare different embedding models.
 
 
+Note: I would prefer to use Marcella Hazan's cookbook The Essentials of Italian Cooking for this application, but it's not public domain. For my personal use, I will expand this project to include it along with various books from Marco Pierre White, Thomas Keller, and etc.

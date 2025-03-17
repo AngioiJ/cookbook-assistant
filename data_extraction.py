@@ -1,8 +1,3 @@
-"""
-This script will extract the chapters and recipes from the PDF of "A Guide to Modern Cookery" 
-and place the recipes of each chapter into a JSON file with the chatper's name.
-"""
-
 import pymupdf
 import re
 from rapidfuzz import fuzz, process
