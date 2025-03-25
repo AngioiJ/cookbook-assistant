@@ -31,7 +31,7 @@
 
 ### Future plans: 
 - Typo fixes for the OCR of the original document.
-    - Will use SymSpell over TextBlob due to multilingual text due to various french loan words present.
+    - Will use SymSpell to handle multilingual text by combining the French and English frequency dictionaries.
 - NER on the recipes for filtering based on ingredients and methods.
 - Compare different embedding models.
 - Compare different LLM models.
