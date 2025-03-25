@@ -28,7 +28,7 @@ for text in toc_page_texts:
                 page_num = split_text[-1]
                 chapters[title] = page_num 
             
-# fix some of the mistakes from the OCR
+# fixing some of the mistakes from the OCR manually
 chapters['FONDS  DE  CUISINE  '] = 1
 chapters['THE  LEADING  WARM   SAUCES     '] = 15
 chapters['THE  COURT-BOUILLONS  AND  THE  MARINADES  '] = 64
@@ -55,23 +55,23 @@ for i in range(len(correct_titles)):
 # Sort back into order and correct the page numbers to match the PDF page numbers
 chapters = dict(sorted(chapters.items(), key=lambda item: int(item[1])))
 for chapter in chapters:
-    chapters[chapter] = int(chapters[chapter])+26  # 27-1 for zero indexing
+    chapters[chapter] = int(chapters[chapter])+26  # first page is 27, and -1 for zero indexing
 
+# iterate through each chapter's recipes and extract them into JSONs
 titles = list(chapters.keys())
 page_nums = list(chapters.values())
 all_recipes = {}
 
 n = 0
 for i in range(0, len(page_nums)):
+    pages = []
+    recipes = []
     if i+1 == len(page_nums):
         chapter_range = [page_nums[i], len(doc)]
     else:
         chapter_range = [page_nums[i], page_nums[i+1]]
-        
     print(f"The current chapter range is: {chapter_range[0]} to {chapter_range[1]}.")
-    pages = []
-    recipes = []
-
+    
     # filtering out the title and chapter title lines
     target_phrases = ["GUIDE TO MODERN COOKERY", titles[n]]
     for j in range(chapter_range[0], chapter_range[1]):
