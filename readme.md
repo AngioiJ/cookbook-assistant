@@ -1,29 +1,32 @@
 # An Interactive Guide to Modern Cookery
 
+
 ### Introduction
+
 
 ### Setup Instructions
 
 
 
-
 ### A Guide To What's Been Done
 1) Data Extraction from PDFs of Cookbooks 
-- Extract recipes and store them in a structured manner. 
-    - Extracted text using `PyMuPDF`
-    - Identified recipes and key information using Python's Regular Expression module `re`
-    - Stored recipes using JSON format
+- Extracted recipes and stored them in a structured manner. 
+    - Extracted text using `PyMuPDF`.
+    - Identified recipes and key information using Python's Regular Expression module `re`.
+    - Stored recipes using JSON format.
+- See `data extraction.ipynb`.
 
 2) Implement Retrieval Augmented Generation (RAG). 
-- store the structured recipes in a vector database
-    - Used `ChromaDB`
-- use embedding models to index and retrieve relevant recipes based on user queries
-    - Embeddings computed via `mxbai-embed-large:latest`
-- pass retrieved data to an LLM to generate the response
-    - Responses generated via `llama3:latest`
+- Stored the structured recipes in a vector database.
+    - Used `ChromaDB`.
+- Used embedding models to index and retrieve relevant recipes based on user queries.
+    - Embeddings computed via `mxbai-embed-large:latest` and `Ollama`.
+- Used retrieved data to and an LLM to generate responses.
+    - Responses generated via `llama3:latest`.
+- See `rag.ipynb`.
 
 3) Frontend and UI
-- Built a small chat interface using `Gradio`
+- Built a basic chat interface using `Gradio`.
 
 
 ### Future plans: 
