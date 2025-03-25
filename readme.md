@@ -37,10 +37,10 @@ Whether you're a curious home cook, a developer interested in language models, o
 - Typo fixes for the OCR of the original document.
     - Will use SymSpell to handle multilingual text by combining the French and English frequency dictionaries.
 - NER on the recipes for filtering based on ingredients and methods.
-- Develop tests to quantify retrieval and compare various models and embedding methods.
+- Develop tests to quantify retrieval and compare various models and embedding methods. Possibly use LLM-as-a-judge.
 - Compare different embedding models.
 - Compare different LLM models.
-- Evaluate the necessity of a chunking method for longer recipes.
+- Evaluate the necessity of a chunking method for longer recipes. As of now, it seems unnecessary considering most recipes are approximately a paragraph. 
 - Add a chat history for developing recipes
 - Add a feature for users to save recipes they've developed.
 - Add a feature to load saved recipes for further development or modification.
