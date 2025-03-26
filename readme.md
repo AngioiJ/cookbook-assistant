@@ -1,6 +1,5 @@
 # An Interactive Guide to Modern Cookery
 
-
 ### Introduction
 **An Interactive Guide to Modern Cookery** is a technical exploration and functional prototype designed to reimagine how we interact with traditional cookbooks. By leveraging modern natural language processing and retrieval techniques, this project transforms static recipe texts into a searchable, conversational experience.
 
@@ -9,7 +8,13 @@ At its core, this guide uses Retrieval Augmented Generation (RAG) to allow users
 Whether you're a curious home cook, a developer interested in language models, or a culinary historian exploring digital interfaces for classic texts, this project offers a glimpse into how AI can enhance the accessibility and personalization of culinary knowledge.
 
 ### Setup Instructions
-
+1. Install Python3
+2. Install the dependencies in `requirements.txt`.
+3. Install Ollama
+4. Use Ollama to pull the models:
+    - `Ollama pull mxbai-embed-large:latest`
+    - `Ollama pull llama3:latest`
+5. 
 
 
 ### A Guide To What's Been Done

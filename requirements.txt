@@ -1,0 +1,6 @@
+pymupdf
+re
+rapidfuzz
+ollama
+chromadb=0.5.3
+gradio
