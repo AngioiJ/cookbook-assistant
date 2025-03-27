@@ -14,8 +14,8 @@ Requirements:
 - A computer capable of running large language models (recommended: 16 GB RAM or more, modern CPU, optional GPU acceleration).
 
 Steps:
-1. Install Python 3.9.16 or later.
-2. Install the dependencies in `requirements.txt`. Optionally but recommended, you should create a Python virtual environment for this purpose.
+1. Install Python >= 3.9.16.
+2. Install the dependencies in `requirements.txt`. Optionally, but recommended, create a Python virtual environment for this purpose.
 3. Install the latest version of [Ollama](https://ollama.com/).
 4. Use Ollama to pull the models via the following terminal commands:
     - `Ollama pull mxbai-embed-large:latest`
@@ -47,8 +47,8 @@ Steps:
 ### Future plans: 
 - Typo fixes for the OCR of the original document.
     - Will use SymSpell to handle multilingual text by combining the French and English frequency dictionaries.
-- NER on the recipes for filtering based on ingredients and methods.
-- Develop tests to quantify retrieval and compare various models and embedding methods. Possibly using LLM-as-a-judge.
+- NER on the recipes for filtering based on ingredients and methods (requires the Typo fixes first).
+- Develop tests to quantify retrieval and compare various models and embedding methods. Will consider using LLM-as-a-judge.
 - Compare different embedding models.
 - Compare different LLM models.
 - Evaluate the necessity of a chunking method for longer recipes. As of now, it seems unnecessary considering most recipes are approximately a paragraph. 
