@@ -25,7 +25,7 @@ Steps:
 
 ### A Guide To What's Been Done
 1) Data Extraction from PDFs of Cookbooks 
-    - Extracted r   ecipes and stored them in a structured manner. 
+    - Extracted recipes and stored them in a structured manner. 
         - Extracted text using `PyMuPDF`.
         - Identified recipes and key information using Python's Regular Expression module `re`.
         - Stored recipes using JSON format.
