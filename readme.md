@@ -13,7 +13,7 @@ Whether you're a curious home cook, a developer interested in language models, o
 texts, this project offers a glimpse into how AI can enhance the accessibility and personalization of culinary knowledge.
 
 ### Setup Instructions
-Requirements: 
+System Requirements: 
 - 670 MB space for `mxbai-embed-large:latest`.
 - 4.7 GB space for `llama3:latest`.
 - A computer capable of running large language models (recommended: 16 GB RAM or more, modern CPU, optional GPU acceleration).
@@ -60,4 +60,5 @@ Steps:
 - Add a chat history for developing recipes
 - Add a feature for users to save recipes they've developed.
 - Add a feature to load saved recipes for further development or modification.
-- Find other public domain cookbooks for other cuisines (e.g. if Marcella Hazan's "Essentials of Italian Cooking" were public domain). May look into Wikipedia's archive of recipes.
+- Find other public domain cookbooks for other cuisines (e.g. if Marcella Hazan's "Essentials of Italian Cooking" were public domain). Will consider Wikipedia's archive of recipes.
+- Add an easy method for a user to swap from locally hosted models via Ollama to an API of their choice. 
